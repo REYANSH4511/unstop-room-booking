@@ -1,4 +1,4 @@
-import { ErrorRequestHandler } from "express";
+import type { Request, Response, NextFunction } from "express";
 import { errorHandler } from "../utils/responseHandler.js";
 import logger from "../logger/index.js";
 import constants from "../config/constants.js";
@@ -15,11 +15,11 @@ import constants from "../config/constants.js";
  * never raw stack traces (security + UX).
  */
 
-export const globalErrorHandler: ErrorRequestHandler = (
-  err,
-  _req,
-  res,
-  _next
+export const globalErrorHandler = (
+  err: Error,
+  _req: Request,
+  res: Response,
+  _next: NextFunction
 ): void => {
   logger.error(`Unhandled error: ${err?.stack || err?.message || err}`);
 
