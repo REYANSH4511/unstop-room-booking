@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 font-sans antialiased;
+  }
+}
+
+@layer components {
+  .room-card {
+    @apply relative flex items-center justify-center rounded-lg text-xs font-bold transition-all duration-200 cursor-default select-none;
+    min-height: 40px;
+  }
+  .room-available {
+    @apply bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/30;
+  }
+  .room-occupied {
+    @apply bg-red-500/20 text-red-400 border border-red-500/30;
+  }
+  .room-booked {
+    @apply bg-blue-500/20 text-blue-400 border border-blue-500/40 ring-2 ring-blue-400/50 animate-pulse;
+  }
+  .room-lift {
+    @apply bg-amber-500/20 text-amber-400 border border-amber-500/30;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
