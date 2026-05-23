@@ -8,10 +8,10 @@
 
 | Item | Link | Status |
 |------|------|--------|
-| **Live Application** | https://your-frontend-url.vercel.app | Deployed |
-| **Source Code (GitHub)** | https://github.com/yourusername/hotel-reservation | Public |
-| **API Documentation (Swagger)** | https://your-backend-url.render.com/api-docs | Live |
-| **Backend Health Check** | https://your-backend-url.render.com/api/health | Live |
+| **Live Application** | https://hotel-booking-frontend-five-rouge.vercel.app | Deployed |
+| **Source Code (GitHub)** | https://github.com/REYANSH4511/unstop-room-booking | Public |
+| **API Documentation (Swagger)** | https://hotel-booking-api-1jh7.onrender.com/api-docs | Live |
+| **Backend Health Check** | https://hotel-booking-api-1jh7.onrender.com/api/health | Live |
 
 ---
 
@@ -246,14 +246,14 @@ deploy dist/      # Upload to CDN
 ```
 PORT=8080
 NODE_ENV=production
-APP_URL=https://your-backend-url.render.com
-FRONTEND_URL=https://your-frontend-url.vercel.app
+APP_URL=https://hotel-booking-api-1jh7.onrender.com
+FRONTEND_URL=https://hotel-booking-frontend-five-rouge.vercel.app
 LOG_LEVEL=info
 ```
 
 **Frontend** (`.env`):
 ```
-VITE_API_URL=https://your-backend-url.render.com/api/v1
+VITE_API_URL=https://hotel-booking-api-1jh7.onrender.com/api/v1
 ```
 
 ---
