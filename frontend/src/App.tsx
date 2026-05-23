@@ -21,8 +21,9 @@ export default function App() {
   const [apiConnected, setApiConnected] = useState(false);
 
   // Health check
+  const API_BASE = import.meta.env.VITE_API_URL || "/api/v1";
   useEffect(() => {
-    fetch("/api/health")
+    fetch(`${API_BASE.replace("/api/v1", "")}/api/health`)
       .then((r) => r.ok && setApiConnected(true))
       .catch(() => setApiConnected(false));
   }, []);
